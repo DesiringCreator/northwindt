@@ -1,0 +1,464 @@
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Button2 = Instance.new("TextButton")
+local Button3 = Instance.new("TextButton")
+local Button4 = Instance.new("TextButton")
+local Button5 = Instance.new("TextButton")
+local Button1 = Instance.new("TextButton")
+local Button6 = Instance.new("TextButton")
+local Button7 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.0568927899, 0, 0.0789163709, 0)
+Main.Size = UDim2.new(0, 283, 0, 381)
+
+Label.Name = "Label"
+Label.Parent = Main
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Label.Size = UDim2.new(0, 236, 0, 50)
+Label.Font = Enum.Font.SourceSansBold
+Label.Text = "Northwind GUI | By t#"
+Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label.TextSize = 24.000
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.Position = UDim2.new(0, 0, 0.131233603, 0)
+ScrollingFrame.Size = UDim2.new(0, 279, 0, 331)
+
+Button2.Name = "Button2"
+Button2.Parent = ScrollingFrame
+Button2.BackgroundColor3 = Color3.fromRGB(201, 255, 143)
+Button2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button2.Position = UDim2.new(0.0338404588, 0, 0.107140072, 0)
+Button2.Size = UDim2.new(0, 75, 0, 58)
+Button2.Font = Enum.Font.SourceSans
+Button2.Text = "Tree ESP"
+Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button2.TextSize = 21.000
+Button2.TextWrapped = true
+Button2.MouseButton1Down:connect(function()
+	for i,v in pairs(game:GetService("Workspace").StaticProps.Resources:GetDescendants()) do
+		if v.Name == "Trunk" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end
+
+	game:GetService("Workspace").StaticProps.Resources.DescendantAdded:Connect(function(v)
+		if v.Name == "Trunk" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end)
+end)
+
+Button3.Name = "Button3"
+Button3.Parent = ScrollingFrame
+Button3.BackgroundColor3 = Color3.fromRGB(255, 236, 140)
+Button3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button3.Position = UDim2.new(0.0338404588, 0, 0.0219165087, 0)
+Button3.Size = UDim2.new(0, 75, 0, 55)
+Button3.Font = Enum.Font.SourceSans
+Button3.Text = "Ore ESP"
+Button3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button3.TextSize = 21.000
+Button3.TextWrapped = true
+Button3.MouseButton1Down:connect(function()
+	for i,v in pairs(game:GetService("Workspace").StaticProps.Resources:GetDescendants()) do
+		if v.Name == "Rock" or v.Name == "Copper ore" or v.Name == "Silver ore" or v.Name == "Gold ore" or v.Name == "Wolfram ore" or v.Name == "Platinum ore" or v.Name == "Cobalt ore" or v.Name == "Rutile ore" or v.Name == "Lead ore" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end
+
+	game:GetService("Workspace").StaticProps.Resources.DescendantAdded:Connect(function(v)
+		if v.Name == "Rock" or v.Name == "Copper ore" or v.Name == "Silver ore" or v.Name == "Gold ore" or v.Name == "Wolfram ore" or v.Name == "Platinum ore" or v.Name == "Cobalt ore" or v.Name == "Rutile ore" or v.Name == "Lead ore" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end)
+end)
+
+Button4.Name = "Button4"
+Button4.Parent = ScrollingFrame
+Button4.BackgroundColor3 = Color3.fromRGB(255, 183, 101)
+Button4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button4.Position = UDim2.new(0.659535468, 0, 0.0211061388, 0)
+Button4.Size = UDim2.new(0, 73, 0, 56)
+Button4.Font = Enum.Font.SourceSans
+Button4.Text = "Treasure ESP"
+Button4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button4.TextSize = 21.000
+Button4.TextWrapped = true
+Button4.MouseButton1Down:connect(function()
+	for i,v in pairs(game:GetService("Workspace").TargetFilter:GetDescendants()) do
+		if v.Parent.Name == "TreasureHuntMarkers" or v.Parent.Name == "TreasureHuntLocations" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end
+
+	game:GetService("Workspace").TargetFilter.TreasureHuntMarkers.DescendantAdded:Connect(function(v)
+		if v.Parent.Name == "TreasureHuntMarkers" or v.Parent.Name == "TreasureHuntLocations" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end)
+end)
+
+Button5.Name = "Button5"
+Button5.Parent = ScrollingFrame
+Button5.BackgroundColor3 = Color3.fromRGB(255, 138, 140)
+Button5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button5.Position = UDim2.new(0.337778032, 0, 0.0205207858, 0)
+Button5.Size = UDim2.new(0, 78, 0, 55)
+Button5.Font = Enum.Font.SourceSans
+Button5.Text = "Player ESP"
+Button5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button5.TextSize = 21.000
+Button5.TextWrapped = true
+Button5.MouseButton1Down:connect(function()
+	_G.On = true
+
+	while _G.On and wait() do
+		for i,b in pairs(game:GetService("Workspace").Characters:GetDescendants()) do
+			if b.ClassName == "BoxHandleAdornment" or b.ClassName == "NameEsp" then
+				b:Destroy()
+			end
+		end
+
+		for i,v in pairs(game:GetService("Workspace").Characters:GetDescendants()) do
+			if v.ClassName == "MeshPart" then
+				local cham = Instance.new("BoxHandleAdornment", v)
+				cham.ZIndex = 10
+				cham.Adornee = v
+				cham.AlwaysOnTop = true
+				cham.Size = v.Size
+				cham.Transparency = 0.3
+				cham.Color3 = v.Color
+				cham.Name = "Cham"
+
+				local bill = Instance.new("BillboardGui", v.Parent.Head)
+				bill.Name = "NameEsp"
+				bill.Size = UDim2.new(10,0,10,0)
+				bill.Adornee = v.Parent.Head
+				bill.AlwaysOnTop = true
+				local name = Instance.new("TextLabel", bill)
+				name.TextWrapped = true
+				name.Text = "["..v.Parent.Humanoid.Health.."]".." "..v.Parent.Name.." | "..v.Parent.WorldHumanGui.Identification.FullName.TextGui.Text:gsub("<b>", "")
+				name.Size = UDim2.new(1,0,1,0)
+				name.TextYAlignment = "Top"
+				name.TextColor3 = Color3.new(1,1,1)
+				name.BackgroundTransparency = 1
+			end
+		end
+	end
+
+end)
+
+Button1.Name = "Button1"
+Button1.Parent = ScrollingFrame
+Button1.BackgroundColor3 = Color3.fromRGB(165, 194, 255)
+Button1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button1.Position = UDim2.new(0.345668405, 0, 0.107140072, 0)
+Button1.Size = UDim2.new(0, 75, 0, 58)
+Button1.Font = Enum.Font.SourceSans
+Button1.Text = "Animal ESP"
+Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button1.TextSize = 21.000
+Button1.TextWrapped = true
+Button1.MouseButton1Down:connect(function()
+	for i,b in pairs(game:GetService("Workspace").NPCs.Animals:GetDescendants()) do
+		if b.ClassName == "BoxHandleAdornment" or b.ClassName == "NameEsp" then
+			b:Destroy()
+		end
+	end
+
+	for i,v in pairs(game:GetService("Workspace").NPCs.Animals:GetDescendants()) do
+		if v.ClassName == "MeshPart" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v.Parent.Head)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v.Parent.Head
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end
+
+	game:GetService("Workspace").NPCs.Animals.DescendantAdded:Connect(function(v)
+		if v.ClassName == "MeshPart" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v.Parent.Head)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v.Parent.Head
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end)
+end)
+
+Button6.Name = "Button6"
+Button6.Parent = ScrollingFrame
+Button6.BackgroundColor3 = Color3.fromRGB(84, 201, 255)
+Button6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button6.Position = UDim2.new(0.650327921, 0, 0.107140072, 0)
+Button6.Size = UDim2.new(0, 75, 0, 58)
+Button6.Font = Enum.Font.SourceSans
+Button6.Text = "Lag Bomb"
+Button6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button6.TextSize = 21.000
+Button6.TextWrapped = true
+Button6.MouseButton1Down:connect(function()
+	if not _G.VACCINATED then
+		for i,v in pairs(getconnections(game.ReplicatedStorage.DefinEvents.InteractingReplicateSendSystemChat.OnClientEvent)) do
+			local old
+			old = hookfunction(v.Function, function(...)
+				local args = {...}
+				for i,v in pairs(args) do
+					if type(v) == 'string' and (v:lower():find(' faces...') or v:lower():find(' rolls a ')) then
+						return
+					end
+				end
+
+				return old(...)
+			end)
+		end
+	end
+	_G.VACCINATED = true
+
+
+	-- funny crash
+	local Interaction = game:GetService('ReplicatedStorage').Interacting
+	local DiceEvent = game:GetService('ReplicatedStorage').DefinEvents.InteractingRequestRollDice
+	for i = 1, 10000 do
+		task.spawn(function()
+			game:GetService('ReplicatedStorage').DefinEvents.InteractingRequestRollDice:InvokeServer(Interaction, 6, 20) -- maxmimum amount
+		end)
+	end
+end)
+
+Button7.Name = "Button7"
+Button7.Parent = ScrollingFrame
+Button7.BackgroundColor3 = Color3.fromRGB(236, 160, 255)
+Button7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button7.Position = UDim2.new(0.0338404477, 0, 0.199003592, 0)
+Button7.Size = UDim2.new(0, 75, 0, 58)
+Button7.Font = Enum.Font.SourceSans
+Button7.Text = "Storage ESP"
+Button7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button7.TextSize = 21.000
+Button7.TextWrapped = true
+Button7.MouseButton1Down:connect(function()
+	for i,v in pairs(game:GetService("Workspace").Carriables:GetDescendants()) do
+		if v.Parent.Name == "Player remains" or v.Parent.Name == "Storage remains" and v.Name ~= "bagtie" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end
+
+	game:GetService("Workspace").Carriables.DescendantAdded:Connect(function(v)
+		if v.Parent.Name == "Player remains" or v.Parent.Name == "Storage remains" and v.Name ~= "bagtie" then
+			local cham = Instance.new("BoxHandleAdornment", v)
+			cham.ZIndex = 10
+			cham.Adornee = v
+			cham.AlwaysOnTop = true
+			cham.Size = v.Size
+			cham.Transparency = 0.75
+			cham.Color3 = v.Color
+			cham.Name = "Cham"
+
+			local bill = Instance.new("BillboardGui", v)
+			bill.Name = "NameEsp"
+			bill.Size = UDim2.new(30,30,30,30)
+			bill.Adornee = v
+			bill.AlwaysOnTop = true
+			local name = Instance.new("TextLabel", bill)
+			name.TextWrapped = true
+			name.Text = v.Parent.Name
+			name.Size = UDim2.new(1,0,1,0)
+			name.TextYAlignment = "Top"
+			name.TextColor3 = Color3.new(1,1,1)
+			name.BackgroundTransparency = 1
+		end
+	end)
+
+end)
