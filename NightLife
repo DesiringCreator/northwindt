@@ -20,6 +20,26 @@ TeleportSection:NewButton("Rupert TP", "Teleports you to Rupert Island.", functi
 end)
 
 
+TeleportSection:NewButton("Beauval TP", "Teleports you to Beauval Island.", function()
+    game:GetService("TeleportService"):Teleport(5620237900,game:GetService("Players").LocalPlayer)
+end)
+
+
+TeleportSection:NewButton("Cantermagne TP", "Teleports you to Cantermagne Island.", function()
+    game:GetService("TeleportService"):Teleport(5620237741,game:GetService("Players").LocalPlayer)
+end)
+
+
+TeleportSection:NewButton("Stonemore TP", "Teleports you to Stonemore Island.", function()
+    game:GetService("TeleportService"):Teleport(6249721735,game:GetService("Players").LocalPlayer)
+end)
+
+
+TeleportSection:NewButton("Ellesmere TP", "Teleports you to Ellesmere Island.", function()
+    game:GetService("TeleportService"):Teleport(5620227713,game:GetService("Players").LocalPlayer)
+end)
+
+
 TeleportSection:NewButton("Small Server TP", "Teleports you to the smallest server.", function()
     local Http = game:GetService("HttpService")
 local TPS = game:GetService("TeleportService")
